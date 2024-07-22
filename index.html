@@ -9,64 +9,74 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg menu navbar-dark fixed-top">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">TomasApp</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+  <header>
+    <nav class="navbar navbar-expand-lg menu navbar-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">LeonardoApp</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="avatar" role="button" data-bs-toggle="dropdown"></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#" id="botonsalir">Salir</a>
                   </li>
                 </ul>
-              </div>
-            </div>
-          </nav>
-    </header>
-    <main>
+              </li>
+              <li class="nav-item mt-2">
+                <i class="bi bi-person-circle text-white fw-bold mt-5 fs-2"></i>
+              </li>
 
-        <div class="banner"></div>      
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+</header>
+    <main>
+        <div class="banner">
+          <iframe width="550px" height="550px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=_tQLPBERE02ODHwzuet1gUi34O0FBV9IqXRJbigbFrlURjFaVDY4TjZSQ0dER1U4S0lZWFc0MzZaVS4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+        </div>      
         
         <button class="btn btn-primary botonChat" id="botonChat" onclick="cambiarCaja()">Chat con Tomas</button>
         <div class="cajaChat" id="cajaChat">
-            <div class="p-4">
-                <h5>Tomas</h5>
-                <p>Bienvenido, soy Tomas...</p>
-                <hr>
-                <p class="text-star">Hola como estas???</p>
-                <p class="text-end text-primary fw-bold">Muy bien</p>
-
-                <div class="textoChat">
-                  <div class="container-fluid">
-                    <div class="row">
-                      <div class="col-6">
-                        <input type="text" class="textoChat form-control my-3" id="textoChat">  
-                      </div>
-                      <div class="col-4 mt-2">
-                        <i class="bi bi-send-fill fs-1"></i>
-                      </div>
-                    </div>
+            <div class="p-4 mensajeChat" id="mensajeChat">
+              <p class="text-star">Hola Bienvenido</p>
+              <p class="text-end">Gracias</p>    
+            </div>
+            <div class="areaTextoChat">
+              <div class="container">
+                <div class="row">
+                  <div class="col-9">
+                    <input type="text" class="form-control my-3" id="textoChat">
+                  </div>
+                  <div class="col-3 mt-3">
+                    <i class="bi bi-arrow-right-square-fill fs-3 botonSend" id="botonSend"></i>
                   </div>
                 </div>
-                 <div class="textoChat">
-                 </div> 
+              </div>
             </div>
         </div>
 
         <section class="container-fluid g-0">
-          <div class="row">
+          <div class="row"> 
             <div class="col-12 my-5">
               <img src="./assets/img/sura tigre.jpg" alt="foto" class="img-fluid">
 
@@ -85,7 +95,13 @@
     </main>
     <footer>
     </footer>
+
+
+<script src="./src/services/servicio.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./src/controllers/controlador.js"></script>
+    <script src="./src/controllers/contorladorSalida.js" type="module"></script>
+    <script src="./src/controllers/controladorChat.js" type="module"></script>
 </body>
 </html>
